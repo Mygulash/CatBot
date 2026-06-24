@@ -57,8 +57,8 @@ async def on_ready():
 @bot.tree.command(name="catinfo", description="Information about CatBot")
 async def catinfo(interaction: discord.Interaction):
     embed = discord.Embed(
-        title="🐾 CatBot Information", 
-        description="I am CatBot and I send you cute cat memes every day!",
+        title="🐈 CatBot Information", 
+        description="I am CatBot and I send you cute cat memes every day! (4:00 AM UTC)",
         color=discord.Color.blue()
     )
     embed.add_field(name="Developer", value="<@722839649046757497>", inline=True)
@@ -80,7 +80,7 @@ async def subscribe(interaction: discord.Interaction, amount: app_commands.Range
 @bot.tree.command(name = "unsubscribe", description = "Unsubscribe from receiving cat memes every day")
 async def unsubscribe(interaction: discord.Interaction):
     if interaction.user.id not in users:
-        await interaction.response.send_message("🟥You are not subscribed to receive memes D:", ephemeral=True)
+        await interaction.response.send_message("🟥 You are not subscribed to receive memes D:", ephemeral=True)
         return
     del users[interaction.user.id]
     save_users()
@@ -91,25 +91,25 @@ async def unsubscribe(interaction: discord.Interaction):
 @app_commands.describe(amount = "The amount of memes you want to receive (1-10)")
 async def changeamount(interaction: discord.Interaction, amount: app_commands.Range[int, 1, 10]):
     if interaction.user.id not in users:
-        await interaction.response.send_message("🟥You are not subscribed to receive memes D:", ephemeral=True)
+        await interaction.response.send_message("🟥 You are not subscribed to receive memes D:", ephemeral=True)
         return
     users[interaction.user.id] = amount
     save_users()
-    await interaction.response.send_message(f"🐈You have set the amount of cat memes to **{amount}**", ephemeral=True)
+    await interaction.response.send_message(f"🐈 You have set the amount of cat memes to **{amount}**", ephemeral=True)
 
 #creates a command to check how many memes does the user receive
 @bot.tree.command(name = "checkamount", description = "Check the amount of memes you are receiving every day :O")
 async def checkamount(interaction: discord.Interaction):
     if interaction.user.id not in users:
-        await interaction.response.send_message("🟥You are not subscribed to receive memes D:", ephemeral=True)
+        await interaction.response.send_message("🟥 You are not subscribed to receive memes D:", ephemeral=True)
         return
     amount = users[interaction.user.id]
-    await interaction.response.send_message(f"🐈You are receiving **{amount}** cat memes every day!", ephemeral=True)
+    await interaction.response.send_message(f"🐈 You are receiving **{amount}** cat memes every day!", ephemeral=True)
 
 #creates a command to check the number of users
 @bot.tree.command(name = "usersnum", description = "Check the number of subscribed users!")
 async def usersnum(interaction: discord.Interaction):
-    await interaction.response.send_message(f"📈Number of subscribed users: **{len(users)}**", ephemeral=True)
+    await interaction.response.send_message(f"📈 Number of subscribed users: **{len(users)}**", ephemeral=True)
 
 #creates a command that writes  the list of commands 
 @bot.tree.command(name = "cathelp", description = "Check the list of commands")
