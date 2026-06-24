@@ -9,12 +9,19 @@ He can be tested on this discord server: https://discord.gg/N4rbrAE3u
 
 His commands:
 /catinfo - Get information about CatBot
+
 /subscribe - Subscribe to receive cat memes!
+
 /unsubscribe - Unsubscribe from receiving cat memes :(
+
 /changeamount - Change the amount of cat memes you receive
+
 /checkamount - Check the amount of cat memes you are receiving
+
 /usersnum - Check the number of subscribed users :O
+
 /cathelp - Check the list of commands
+
 
 He is hosted on Nest provided by Hack Club. 
 
