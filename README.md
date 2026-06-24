@@ -3,7 +3,8 @@ This is CatBot 🐈
 His main mission is to send you cat memes every day (at 4:00 AM UTC)
 He is a 24/7 discord bot that you can add to your server via:
 https://discord.com/oauth2/authorize?client_id=1519305709056032808&permissions=67584&integration_type=0&scope=bot
-He need permission to send messages and read chat history. 
+
+He needs permission to send messages and read chat history. 
 He can be tested on this discord server: https://discord.gg/N4rbrAE3u
 
 His commands:
